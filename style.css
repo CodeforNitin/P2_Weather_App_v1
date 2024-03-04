@@ -20,8 +20,8 @@ body{
 .container{
     position: relative;
     background-color: rgb(129, 53, 95);
-    width: 400px;
-    height:500px;
+    width: 300px;
+    height:450px;
     padding: 20px;
     border-radius: 20px;
     color: rgb(255, 255, 255);
@@ -31,7 +31,7 @@ body{
     position: relative;
     width: 100%;
     height: 55px;
-    background-color: rgb(148, 148, 223);
+    background-color: transparent;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -46,12 +46,12 @@ body{
     border-radius: 10px;
     color: rgb(255, 255, 255);
     padding: 0px 55px 0px 50px;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     text-transform: uppercase;
+    border-color: aliceblue;
+    border-width: 2px;
     outline: none;
-    border: none;
-
 
 }
 
@@ -88,10 +88,12 @@ body{
     line-height: 1;
     font-weight: 700;
     font-family: "Varela Round", sans-serif;
+    text-transform: capitalize;
 }
 
 .weather-box img{
     width:60%;
+    margin-top: -30px;
 }
 
 .weather-box{
@@ -114,4 +116,56 @@ body{
     line-height: 1;
     font-weight: 700;
     font-family: "Varela Round", sans-serif;
+}
+
+.weather-details{
+    position: absolute;
+    width: 94%;
+    bottom:10px;
+    left: 0;
+    padding: 0px 10px;
+    display: flex;
+    background-color: red;
+    font-family: "Varela Round", sans-serif;
+}
+
+.weather-details .humid,
+.weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.weather-details .humid{
+    padding-left: 10px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.weather-details span{
+display: inline-block;
+font-size: 20px;
+font-weight: 500;
+
+}
+
+.info-humid,
+.info-wind
+{
+    margin-bottom: -10px;
+}
+
+.humid-text,
+.wind-text{
+    margin-top: 10px;
+    font-size: 15px;
 }
