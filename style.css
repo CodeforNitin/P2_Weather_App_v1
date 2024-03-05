@@ -107,6 +107,20 @@ body{
     margin: 40px 0;
 }
 
+.weather-box,
+.weather-details,
+.not-found{
+    visibility: hidden;
+
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active{
+    visibility: visible;
+}
+
+
 .weather-box .temperature{
     position: relative;
     font-size: 64px;
@@ -175,4 +189,21 @@ font-weight: 500;
 .wind-text{
     margin-top: 10px;
     font-size: 12px;
+}
+
+.not-found {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 110px;
+    background-color: red;
+
+}
+
+.not-found img{
+    position: absolute;
+    width: 65%;
+    left: 60px;
 }
