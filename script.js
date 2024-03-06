@@ -15,7 +15,7 @@ search.addEventListener('click', () => {
         .then(response => response.json())
         .then(json => {
             if (json.cod == '404'){
-                container.style.height = '400px';
+                container.style.height = '300px';
                 weatherBox.classList.remove('active');
                 weatherDetails.classList.remove('active');
                 error404.classList.add('active');
@@ -59,6 +59,10 @@ search.addEventListener('click', () => {
             description.innerText = `${json.weather[0].description}`;
             humidity.innerText = `${json.main.humidity}%`;
             wind.innerText = `${json.wind.speed} Km/h`;
+
+            const infoWeather = document.querySelector('.info-weather');
+            const infoHumidity = document.querySelector('.info-humidity');
+            const infoWind = document.querySelector('.info-wind');
         });
 });
 
