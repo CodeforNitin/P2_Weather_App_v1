@@ -22,7 +22,7 @@ search.addEventListener('click', () => {
                 return;
             }
 
-            // container.style.height = '555px';
+            container.style.height = '500px';
             weatherBox.classList.add('active');
             weatherDetails.classList.add('active');
             error404.classList.remove('active');
@@ -40,7 +40,11 @@ search.addEventListener('click', () => {
                 case 'Rain':
                     image.src = 'images/rain.png';
                     break;
-                case 'Haze', 'Smoke':
+                case 'Clouds':
+                    image.src = 'images/clouds.png';
+                    break;
+                case 'Haze':
+                case 'Smoke':
                     image.src = 'images/haze.png';
                     break;
                 case 'Snow':
@@ -51,7 +55,7 @@ search.addEventListener('click', () => {
                     break;
             }
 
-            temperature.innerText = `${json.main.temp}°C`;
+            temperature.innerText = `${Math.round(json.main.temp)}°C`;
             description.innerText = `${json.weather[0].description}`;
             humidity.innerText = `${json.main.humidity}%`;
             wind.innerText = `${json.wind.speed} Km/h`;
